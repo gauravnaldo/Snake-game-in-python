@@ -1,21 +1,25 @@
-# 🐍 Python Snake Game
+# Retro Snake Game
 
-A classic, fast-paced Snake game built entirely in Python. Navigate the grid, collect food, and rack up the highest score possible without crashing into the walls or your own tail.
+A classic 2D Snake game built in pure Python using `pygame-ce` and packaged as a standalone executable via PyInstaller.
 
-## ✨ Features
-* **Classic Gameplay:** Smooth, grid-based snake movement.
-* **Dynamic Point System:** Real-time score tracking as you collect food.
-* **Progressive Difficulty:**  The snakey speeds up as it grows.
-* **Standalone Executable:** Fully packaged and downloadable to play instantly without setup.
+## Features
+- Smooth grid movement and self/wall collision detection
+- Real-time score counter
+- Bundled into a zero-dependency `.exe`
 
-## 🛠️ Built With
-* [Python 3.x](https://www.python.org/) - Core programming language
-* [Pygame](https://www.pygame.org/) - 2D graphics and audio library
+## Controls
+- **Arrow Keys:** Move (Up, Down, Left, Right)
+- **C:** Play Again (Game Over)
+- **Q:** Quit (Game Over)
 
-## 🚀 Getting Started
-
-### Prerequisites
-If you are running the game from the source code, ensure you have Python installed, along with the Pygame library:
+## Quickstart
 
 ```bash
-pip install pygame
+# 1. Install dependencies
+python -m pip install pygame-ce pyinstaller
+
+# 2. Run the game
+python snake.py
+
+# 3. Build standalone .exe
+pyinstaller --onefile --noconsole snake.py
